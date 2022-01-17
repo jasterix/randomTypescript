@@ -29,3 +29,22 @@ const person1 = {
 };
 const adding = (x, y) => x + y;
 const sub = (x, y) => x + y;
+class Person1 {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+        console.log(123);
+    }
+    register() {
+        return `{this.name} is now registered`;
+    }
+}
+const me = new Person1(13, "jeff");
+//subclass
+class Employee extends Person1 {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Hi", "Dev");

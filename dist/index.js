@@ -15,3 +15,17 @@ const person = {
     name: "me"
 };
 console.log(person.name);
+//functions
+function add(x, y) {
+    return x + y;
+}
+//or 
+function add2({ x, y }) {
+    return x + y;
+}
+const person1 = {
+    id: 1,
+    name: "me"
+};
+const adding = (x, y) => x + y;
+const sub = (x, y) => x + y;

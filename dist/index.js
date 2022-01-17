@@ -10,3 +10,8 @@ var Direction1;
     Direction1["Right"] = "Right";
 })(Direction1 || (Direction1 = {}));
 console.log(Direction1.Down);
+const person = {
+    id: 1,
+    name: "me"
+};
+console.log(person.name);

@@ -48,3 +48,10 @@ class Employee extends Person1 {
     }
 }
 const emp = new Employee(3, "Hi", "Dev");
+//Generics- create reusable components
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArr = getArray([1, 2, 3, 4, 5]);
+let stringArr = getArray(["me", "you", "us"]);
+numArr.push(5);

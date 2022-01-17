@@ -57,3 +57,41 @@ enum Direction1 {
 
     const adding: MathFunc = (x:number, y:number): number => x+y
     const sub: MathFunc = (x:number, y:number): number => x+y
+
+    class Person1 {
+        id: number
+        name:string
+
+        constructor(id:number, name:string){
+            this.id =id
+            this.name = name
+            console.log(123)
+        }
+
+        register(){
+            return `{this.name} is now registered`
+        }
+    }
+    const me= new Person1(13, "jeff")
+
+    //subclass
+    class Employee extends Person1 {
+        position: string
+
+        constructor(id:number, name:string, position:string){
+            super(id, name)
+            this.position = position
+        }
+    }
+
+    const emp = new Employee(3, "Hi", "Dev")
+
+    //Generics- create reusable components
+    function getArray<T>(items:T[]): T[] {
+        return new Array().concat(items)
+    }
+
+    let numArr = getArray<number>([1,2,3,4,5])
+    let stringArr = getArray<string>(["me", "you", "us"])
+
+    numArr.push(5)
